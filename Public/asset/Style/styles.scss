@@ -34,7 +34,7 @@ ul li {
 a {
     text-decoration: none;
     color: #f7b10a;
-    color:visited #f7b10a;
+    color:visited #f7b10a ;
 
 }
 
@@ -98,4 +98,14 @@ article {
     justify-content: end;
     margin: auto;
 
+}
+
+.go {
+    text-align: center;
+    background-color: #ca9415;
+    color: #170e09;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 12px;
+    font-size: 2em;
 }

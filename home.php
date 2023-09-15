@@ -38,10 +38,16 @@
             <div class="space_big">  
             </div>
             <article class="color_beige centered">
-                Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla 
-                Blabla Blabla Blabla Blabla Blabla Blabla Blabla 
-            </article> 
-            <a href="/wowLfg/calendrier"><button>C'est parti !</button></a>
+                Pour utiliser le site, il vous suffit de vous connecter à votre compte battle.net via le boutton connexion en haut de page,
+                puis d'aller sur la page calendrier pour voir les Raid / groupes M+ disponible ! Pour s'inscrire, rien de plus simple ! Cliquez sur
+                l'evênement qui vous interesse pour afficher les informations de ce dernier; si tout vous convient, appuyez sur <em>s'inscrire</em> !
+                Il ne vous restera plus qu'a attendre que Raid leader confirme votre place au sein du roster. Vous retrouverez toutes vos candidatures 
+                dans <em>Mon compte</em> !
+                
+            </article>
+            <div class="space_big">  
+            </div>
+            <div class="centered"><a href="/wowLfg/calendrier"><button class ="go" >C'est parti !</button></a></div>
         </div>
        
        
