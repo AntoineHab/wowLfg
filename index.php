@@ -11,7 +11,6 @@ switch ($path) {
         include './home.php';
         break;
     case '/wowLfg/connexion':
-        $rolesController->addRoles();
         break;
     case '/wowLfg/calendrier':
         include './App/Vue/calendrier.php';
