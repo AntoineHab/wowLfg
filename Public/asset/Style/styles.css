@@ -4,33 +4,48 @@
   font-weight: 300;
   font-style: normal;
 }
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-decoration: none;
+}
+
 body {
   background-color: #170e09;
   font-family: "Semplicita Pro";
   color: #f7b10a;
-  margin: 0px;
-  padding: 0px;
 }
 
 h1 {
   text-align: center;
-  font-size: 5em;
+  font-size: 4.5em;
 }
 
 ul {
   list-style-type: none;
   text-align: center;
+  color: #0074e0;
+  padding: none;
 }
 
 ul li {
   display: inline;
-  margin-right: 10px;
+  padding: 7px;
 }
 
 a {
-  text-decoration: none;
   color: #f7b10a;
-  color: visited #f7b10a;
+}
+a:visited {
+  color: #f7b10a;
+}
+a:hover {
+  cursor: hand;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 article {
@@ -72,21 +87,17 @@ article {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  padding-top: 2em;
 }
 
-.nav1 {
+.nav {
   text-align: center;
   font-size: 2em;
   display: flex;
   margin: auto;
 }
-
-.nav2 {
-  text-align: center;
-  font-size: 2em;
-  display: flex;
+.navnav_2 {
   justify-content: end;
-  margin: auto;
 }
 
 .go {
@@ -97,4 +108,8 @@ article {
   border: none;
   border-radius: 12px;
   font-size: 2em;
+}
+.go_2 {
+  background-color: #0074e0;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */

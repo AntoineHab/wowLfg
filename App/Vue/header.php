@@ -1,24 +1,16 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>header</title>
-</head>
-<body> -->
+<html lang="eng">
             <div class ="container">
-                <nav class="nav1">
+                <nav class="nav">
                     <ul>
-                        <li><a href="">Accueil</a></li>
-                        <li><a href="">Calendrier</a></li>
+                        <li><a href="/wowLfg/">Accueil</a></li>
+                        <li><a href="/wowLfg/calendrier">Calendrier</a></li>
                     </ul>
                 </nav>
-                <nav class="nav2">
+                <nav class="nav nav_2">
                 <ul>
-                    <li><a href="">Connexion</a></li>
-                    <li><a href="https://www.twitch.tv/labiche_tv">Me Soutenir</a></li>
+                    <li><a href="/wowLfg/connexion">Connexion</a></li>
+                    <li><a href="https://www.twitch.tv/labiche_tv">Twitch</a></li>
                 </ul>
                 </nav>
             </div>
-<!-- </body>
-</html> -->
+</html>

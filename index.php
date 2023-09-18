@@ -11,6 +11,7 @@ switch ($path) {
         include './home.php';
         break;
     case '/wowLfg/connexion':
+        include './App/Vue/connexion.php';
         break;
     case '/wowLfg/calendrier':
         include './App/Vue/calendrier.php';

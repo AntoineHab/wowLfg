@@ -13,7 +13,7 @@
             <?php include "./App/Vue/header.php";?>
             <div class="space_big">  
             </div>
-            <h1>WoW LFG</h1>
+            <h1>Bienvenue !</h1>
             <div class="space_big">  
             </div>
             <div class="space_big">  
