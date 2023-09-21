@@ -8,7 +8,7 @@
     <div class="titreCal" >
         <img src="./Public/asset/content/suivant.png" alt="fleche" class ="precedent">
         <h2 id="moi"></h2>
-        <img src="./Public/asset/content/suivant.png" alt="fleche">
+        <img src="./Public/asset/content/suivant.png" alt="fleche" class="suivant">
     </div>
     <div class="space_medium"></div>
     <div id="calendar" class="calendar">

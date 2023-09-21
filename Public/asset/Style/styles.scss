@@ -179,5 +179,15 @@ article {
 }
 .precedent {
     rotate: 180deg;
+    &:hover {
+        cursor: pointer;
+    }
 }
+
+.suivant {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 

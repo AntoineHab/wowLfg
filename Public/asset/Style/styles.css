@@ -178,4 +178,11 @@ article {
 
 .precedent {
   rotate: 180deg;
+}
+.precedent:hover {
+  cursor: pointer;
+}
+
+.suivant:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
