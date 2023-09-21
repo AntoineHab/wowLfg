@@ -112,4 +112,12 @@ article {
 .go_2 {
   background-color: #0074e0;
   color: white;
+}
+
+.calendar {
+  border: solid black 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,7 +1,6 @@
 <?php
 namespace App\Model;
 use App\Utils\BddConnect;
-use App\Model\Roles;
 class Utilisateur extends BddConnect{
     //attributs
     private ?int $id_utilisateur;

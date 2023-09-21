@@ -37,6 +37,12 @@ ul li {
     display: inline;
     padding: 7px;
 }
+tr {
+    
+}
+td{
+
+}
 a {
     color: #f7b10a;
     &:visited {
@@ -121,3 +127,11 @@ article {
         color : white;
     }  
 }
+.calendar {
+    border: solid black 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    width:100%;
+}
+

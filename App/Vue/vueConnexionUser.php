@@ -1,5 +1,5 @@
 <?php ob_start()?>
-    <div class="space_box space_box_1">
+    <div class="space_box space_box_2">
         <?=$header?>
         <div class="space_big">  
         </div>
