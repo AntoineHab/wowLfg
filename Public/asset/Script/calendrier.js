@@ -1,6 +1,8 @@
 function getDaysInMonth(month, year){
     return new Date(year, month, 0).getDate();
 }
+
+
 function createCalendar(month, year){
     const calendar = document.querySelector("#calendar");
     calendar.innerHTML = '';
@@ -25,4 +27,12 @@ function createCalendar(month, year){
         }
 }    
 const currentDate=new Date();
-createCalendar(currentDate.getMonth(), currentDate.getFullYear())
+createCalendar(currentDate.getMonth(), currentDate.getFullYear());
+
+const month = ["Janvier","Fevrier","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"];
+
+const d = new Date();
+let nom = month[d.getMonth()];
+titreCal=document.querySelector("#moi");
+console.log(nom);
+titreCal.innerHTML=nom;
