@@ -12,10 +12,10 @@
             Bienvenue sur World Of Warcraft Looking For Group ! 
             Joueur de ce jeu depuis plus de 10 ans et actuellement en reconversion professionelle dans
             le développement web, j'associe mes deux hobbies pour créer un site qui va nous simplifier 
-            nos recherche de groupe de Raid et de Donjon ! L'utilisation est très facile, que vous soyez 
+            nos recherche de groupe de Raid et de Donjon ! L'utilisation est très facile, que tu sois
             Raid leader ou Pick UP, il suffit de se connecter et se rendre sur la page calendrier !
         </article>
-
+        <div class ="space_big"></div><div class="fleche"><img src="./Public/asset/content/fleche.png" alt="fleche" class ="homefleche"></div>
     </div>
     <div class="space_box space_box_2">
         <div class="space_big">  
@@ -28,10 +28,10 @@
         <div class="space_big">  
         </div>
         <article class="color_beige centered">
-            Pour utiliser le site, il vous suffit de vous connecter à votre compte battle.net via le boutton connexion en haut de page,
-            puis d'aller sur la page calendrier pour voir les Raid / groupes M+ disponible ! Pour s'inscrire, rien de plus simple ! Cliquez sur
-            l'evênement qui vous interesse pour afficher les informations de ce dernier; si tout vous convient, appuyez sur <em>s'inscrire</em> !
-            Il ne vous restera plus qu'a attendre que Raid leader confirme votre place au sein du roster. Vous retrouverez toutes vos candidatures 
+            Pour utiliser le site, connecte toi à ton compte battle.net via le boutton connexion en haut de page,
+            puis va sur la page calendrier pour voir les Raid / groupes M+ disponible ! Pour s'inscrire, rien de plus simple ! Cliques sur
+            l'evênement qui t'interesses pour afficher les informations de ce dernier; si ça te convient, appuis sur <em>s'inscrire</em> !
+            Il ne te restes plus qu'a attendre que Raid leader confirme ta place au sein du roster. Tu retrouveras toutes tes candidatures 
             dans <em>Mon compte</em> !
             
         </article>

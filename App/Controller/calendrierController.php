@@ -14,6 +14,10 @@ class CalendrierController {
     public function getDayEvent(){
         
     }
+    public function addCalendar(){
+
+        //WORK IN PROGRESS
+    }
     
 }
 

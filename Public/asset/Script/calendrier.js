@@ -4,7 +4,6 @@ function getDaysInMonth(month, year){
     return new Date(year, month, 0).getDate();
 }
 
-
 function createCalendar(month, year){
     const calendar = document.querySelector("#calendar");
     calendar.innerHTML = '';

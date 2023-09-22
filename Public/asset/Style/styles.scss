@@ -190,4 +190,15 @@ article {
     }
 }
 
+.fleche {
+    display: flex;
+    justify-content: end;
+    margin-right: 150px;
+}
+.homefleche {
+    rotate : 90deg;
+    max-width : 175px;
+    max-height : 275px;
+}
+
 

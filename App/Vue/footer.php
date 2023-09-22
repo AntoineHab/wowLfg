@@ -1,3 +1,3 @@
 <?php ob_start()?>
-    <p>je suis un pied </p>
+    <article class="centered">je suis un pied </article>
 <?php $footer = ob_get_clean()?>

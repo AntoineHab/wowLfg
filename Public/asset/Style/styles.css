@@ -185,4 +185,16 @@ article {
 
 .suivant:hover {
   cursor: pointer;
+}
+
+.fleche {
+  display: flex;
+  justify-content: end;
+  margin-right: 150px;
+}
+
+.homefleche {
+  rotate: 90deg;
+  max-width: 175px;
+  max-height: 275px;
 }/*# sourceMappingURL=styles.css.map */
