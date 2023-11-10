@@ -8,7 +8,7 @@
         </div>
         <div class="space_big">  
         </div>
-        <article class="color_beige centered">
+        <article class="color_beige centered blur">
             Connectez-vous à votre compte Bnet pour lier le site à vos personnages.
         </article>
         <div class="space_big">  

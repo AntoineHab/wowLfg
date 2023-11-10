@@ -108,6 +108,7 @@ article {
   height: 1080px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 .space_box_1 {
   background-image: url(../content/Horde.jpg);

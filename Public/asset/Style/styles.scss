@@ -110,11 +110,12 @@ article {
         height: 1080px;
         background-repeat: no-repeat;
         background-position: center;
+        background-size: cover; 
             &_1 {
-                background-image: url(../content/Horde.jpg);            
+                background-image: url(../content/Horde.jpg);                    
             }
-            &_2 {
-                background-image: url(../content/Alliance.jpg);
+            &_2{
+                background-image: url(../content/Alliance.jpg);  
             }
            
     }

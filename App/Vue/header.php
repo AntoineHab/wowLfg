@@ -9,7 +9,7 @@
         <nav class="nav nav_2">
         <ul>
             <li><a href="/wowLfg/connexion">Connexion</a></li>
-            <li><a href="https://www.twitch.tv/labiche_tv">Twitch</a></li>
+            <li><a href="https://www.twitch.tv/labiche_tv">Me soutenir</a></li>
         </ul>
         </nav>
     </div>
