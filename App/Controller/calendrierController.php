@@ -5,7 +5,7 @@ use App\vue\Template;
 
 class CalendrierController {
 
-    public function getCalendar(){
+    public function getEvents(){
         $error="";
         Template::render('header.php', 'Calendrier', 'vueCalendrier.php', 'footer.php', 
         $error, ['calendrier.js'], ['styles.css']);

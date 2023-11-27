@@ -5,7 +5,7 @@ use App\Controller\HomeController;
 use App\Controller\UtilisateurController;
 $userController= new UtilisateurController();
 $homeController= new HomeController();
-$calendrierController=new CalendrierController();
+$eventController=new CalendrierController();
 //Analyse de l'URL avec parse_url() et retourne ses composants
 $url = parse_url($_SERVER['REQUEST_URI']);
 //test si l'url posséde une route sinon on renvoi à la racine
@@ -19,7 +19,7 @@ switch ($path) {
         $userController->connexionUser();
         break;
     case '/wowLfg/calendrier':
-        $calendrierController->getCalendar();
+        $eventController->getEvents();
         break;
     default:
         include './error.php';
