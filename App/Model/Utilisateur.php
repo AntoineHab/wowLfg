@@ -45,6 +45,40 @@ class Utilisateur extends BddConnect{
         $this->statut_utilisateur = $statut;
     }
     //Méthodes
-    
+    public function add(){
+        try {
+            //récupérer les données de l'objet
+            $nom = $this->nom_utilisateur;
+            $mail = $this->mail_utilisateur;
+            $password = $this->password_utilisateur;
+            $statut = $this->statut_utilisateur;
+            $req = $this->connexion()->prepare(
+                "INSERT INTO utilisateur(nom_utilisateur, 
+                mail_utilisateur, password_utilisateur, statut_utilisateur) VALUES(?,?,?,?)");
+            $req->bindParam(1, $nom, \PDO::PARAM_STR);
+            $req->bindParam(2, $mail, \PDO::PARAM_STR);
+            $req->bindParam(3, $password, \PDO::PARAM_STR);
+            $req->bindParam(4, $statut, \PDO::PARAM_BOOL);
+            $req->execute();
+        } catch (\Exception $e) {
+            die('Error : '.$e->getMessage());
+        }
+    }
+    public function findOneBy(){
+        try {
+            //récupérer les données de l'objet
+            $mail = $this->mail_utilisateur;
+            $req = $this->connexion()->prepare(
+                "SELECT id_utilisateur, nom_utilisateur, 
+                mail_utilisateur, password_utilisateur, statut_utilisateur
+                FROM utilisateur WHERE mail_utilisateur = ?");
+            $req->bindParam(1, $mail, \PDO::PARAM_STR);
+            $req->setFetchMode(\PDO::FETCH_CLASS| \PDO::FETCH_PROPS_LATE, Utilisateur::class);
+            $req->execute();
+            return $req->fetch();
+        } catch (\Exception $e) {
+            die('Error : '.$e->getMessage());
+        }
+    }
 }
 ?> 

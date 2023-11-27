@@ -135,13 +135,25 @@ article {
     &_2{
         background-color: #0074e0;
         color : #ebdec2;
-        font-size: 1.2em; 
+        font-size: 1.1em; 
         margin-top: 15px;
         &:hover {
             background-color: #ca9415;
             color: #170e09;
         }
-    }  
+    }
+    &_3{
+        background-color: #0074e0;
+        color : #ebdec2;
+        font-size: 1.1em; 
+        margin-top: 15px;
+        padding: 15px 59px;
+        &:hover {
+            background-color: #ca9415;
+            color: #170e09;
+        }
+    }
+      
 }
 .calendar {
     border: solid black 5px;

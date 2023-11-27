@@ -131,10 +131,21 @@ article {
 .go_2 {
   background-color: #0074e0;
   color: #ebdec2;
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-top: 15px;
 }
 .go_2:hover {
+  background-color: #ca9415;
+  color: #170e09;
+}
+.go_3 {
+  background-color: #0074e0;
+  color: #ebdec2;
+  font-size: 1.1em;
+  margin-top: 15px;
+  padding: 15px 59px;
+}
+.go_3:hover {
   background-color: #ca9415;
   color: #170e09;
 }

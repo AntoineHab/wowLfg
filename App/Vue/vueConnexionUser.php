@@ -15,7 +15,7 @@
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="label color_beige centrer">
                     <li>
-                    <ul><label for="nom_utilisateur">Nom de Compte :</label></ul>
+                    <ul><label for="nom_utilisateur">Nom de compte :</label></ul>
                     <ul><input type="text" name="nom_utilisateur" required></ul>
                     <ul><label for="">Mot de passe :</label></ul>
                     <ul><input type="password" name="password_utilisateur" required></ul>
