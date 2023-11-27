@@ -55,8 +55,15 @@ button:hover {
 }
 
 input {
-  width: 150px;
+  width: 175px;
   height: 25px;
+  text-align: center;
+  background-color: #ca9415;
+  border: solid 1px rgba(23, 14, 9, 0.8549019608);
+  border-radius: 8px;
+}
+input:focus {
+  background-color: #ebdec2;
 }
 
 article {
@@ -123,7 +130,13 @@ article {
 }
 .go_2 {
   background-color: #0074e0;
-  color: white;
+  color: #ebdec2;
+  font-size: 1.2em;
+  margin-top: 15px;
+}
+.go_2:hover {
+  background-color: #ca9415;
+  color: #170e09;
 }
 
 .calendar {
@@ -176,12 +189,13 @@ article {
 
 .textInscr {
   grid-column: 1;
-  margin: auto;
+  margin: auto 10px auto;
 }
 
 .label {
   grid-column: 2;
   border: solid black 5px;
+  border-radius: 10px;
   text-align: center;
   background-color: rgba(23, 14, 9, 0.8549019608);
   align-items: center;
@@ -191,7 +205,7 @@ article {
   font-size: 1.5em;
 }
 
-.buttonLog {
+.txt3 {
   grid-column: 3;
-  margin: auto;
+  margin: auto 10px auto;
 }/*# sourceMappingURL=styles.css.map */

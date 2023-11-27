@@ -49,7 +49,7 @@ class UtilisateurController extends Utilisateur{
                 $error = "Veuillez renseigner tous les champs du formulaire";
             }
         }
-        Template::render('header.php', 'Accueil', 'vueInscriptionUser.php', 'footer.php', 
+        Template::render('header.php', 'Inscription', 'vueInscriptionUser.php', 'footer.php', 
         $error, ['script.js', 'main.js'], ['styles.css', 'main.css']);
     }
 }
