@@ -3,7 +3,7 @@ namespace App\Controller;
 use App\Model\Utilisateur;
 use App\vue\Template;
 
-class CalendrierController {
+class EventsController {
 
     public function getEvents(){
         $error="";

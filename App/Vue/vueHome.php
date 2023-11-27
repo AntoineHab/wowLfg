@@ -1,7 +1,7 @@
 <?php ob_start()?>
     <div class="space_box space_box_1">
         <?=$header?>
-        <div class="space_big">  
+        <div class="space_medium">  
         </div>
         <h1>Bienvenue !</h1>
         <div class="space_big">  
@@ -20,8 +20,6 @@
     <div class="space_box space_box_2">
         <div class="space_big">  
         </div>
-        <div class="space_big">  
-        </div>
         <h1>Comment ça marche ?</h1>
         <div class="space_big">
         </div>
@@ -33,7 +31,6 @@
             l'evênement qui t'interesses pour afficher les informations de ce dernier; si ça te convient, appuis sur <em>s'inscrire</em> !
             Il ne te restes plus qu'a attendre que Raid leader confirme ta place au sein du roster. Tu retrouveras toutes tes candidatures 
             dans <em>Mon compte</em> !
-            
         </article>
         <div class="space_big">  
         </div>

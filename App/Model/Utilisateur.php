@@ -26,12 +26,6 @@ class Utilisateur extends BddConnect{
     public function setNom(?string $nom){
         $this->nom_utilisateur = $nom;
     }
-    public function getPrenom():?string{
-        return $this->prenom_utilisateur;
-    }
-    public function setPrenom(?string $prenom){
-        $this->prenom_utilisateur = $prenom;
-    }
     public function getMail():?string{
         return $this->mail_utilisateur;
     }
@@ -44,23 +38,11 @@ class Utilisateur extends BddConnect{
     public function setPassword(?string $password){
         $this->password_utilisateur = $password;
     }
-    public function getImage():?string{
-        return $this->image_utilisateur;
-    }
-    public function setImage(?string $image){
-        $this->image_utilisateur = $image;
-    }
     public function getStatut():?bool{
         return $this->statut_utilisateur;
     }
     public function setStatut(?bool $statut){
         $this->statut_utilisateur = $statut;
-    }
-    public function getRoles():?Roles{
-        return $this->roles;
-    }
-    public function setRoles(?Roles $roles){
-        $this->roles = $roles;
     }
     //Méthodes
     
