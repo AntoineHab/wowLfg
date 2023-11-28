@@ -10,7 +10,6 @@ class Utilisateur extends BddConnect{
     private ?string $password_utilisateur;
     private ?string $image_utilisateur;
     private bool $statut_utilisateur;
-    private Roles $roles;
     //constructeur
 
     //Getters et Setters
@@ -70,7 +69,7 @@ class Utilisateur extends BddConnect{
             $mail = $this->mail_utilisateur;
             $req = $this->connexion()->prepare(
                 "SELECT id_utilisateur, nom_utilisateur, 
-                mail_utilisateur, password_utilisateur, statut_utilisateur
+                mail_utilisateur, password_utilisateur
                 FROM utilisateur WHERE mail_utilisateur = ?");
             $req->bindParam(1, $mail, \PDO::PARAM_STR);
             $req->setFetchMode(\PDO::FETCH_CLASS| \PDO::FETCH_PROPS_LATE, Utilisateur::class);

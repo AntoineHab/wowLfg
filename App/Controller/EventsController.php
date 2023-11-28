@@ -14,9 +14,11 @@ class EventsController {
     public function getDayEvent(){
         
     }
-    public function addCalendar(){
+    public function addEvent(){
 
-        //WORK IN PROGRESS
+        $error="";
+        Template::render('header.php', 'Ajouter un Event', 'vueCalendrier.php', 'footer.php', 
+        $error, ['calendrier.js'], ['styles.css']);
     }
     
 }

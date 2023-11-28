@@ -2,7 +2,7 @@
 <div class="space_box space_box_1">
     <?= $header?>
     <div class ="space_big"></div>
-    <h1>Events en cours</h1>
+    <h1 class="">Planifier un Raid</h1>
     <div class ="space_big"></div>
     <div class ="space_big"></div>
     <div class="">

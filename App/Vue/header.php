@@ -9,8 +9,8 @@
         </nav>
         <nav class="nav nav_2">
         <ul>
-            <li><a href="/wowLfg/mon_Compte">Mon compte</a></li>
-            <li><a href="https://www.twitch.tv/labiche_tv">Me soutenir</a></li>
+            <li><a href="/wowLfg/moncompte">Mon compte</a></li>
+            <li><a href="/wowLfg/deconnexion">Se deconnecter</a></li>
         </ul>
         </nav>
     </div>
