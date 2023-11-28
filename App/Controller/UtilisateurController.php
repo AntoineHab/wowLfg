@@ -77,10 +77,5 @@ class UtilisateurController extends Utilisateur{
         session_destroy();
         header('Location: ./');
     }
-    public function infoUser(){
-        $error ='';
-        Template::render('header.php', 'Mon Compte', 'vueMonCompte.php', 'footer.php', 
-        $error, ['script.js', 'main.js'], ['styles.css', 'main.css']);
-    }
 }
     

@@ -26,7 +26,6 @@ if (isset($_SESSION['connected'])){
             $eventController->getEvents();
             break;
         case '/wowLfg/moncompte':
-            $userController->infoUser();
             $personnageController->addPersonnage();
             break; 
        default:

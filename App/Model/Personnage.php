@@ -27,7 +27,7 @@ class Personnage extends BddConnect{
         return $this->serveur_personnage;
     }
     public function setServeur(?string $serveur){
-        $this->perveur_personnage = $serveur;
+        $this->serveur_personnage = $serveur;
     }
     public function getClasse():?string{
         return $this->password_utilisateur;

@@ -1,15 +1,16 @@
 <?php
 namespace App\Controller;
 use App\Model\Personnage;
+use App\Model\Utilisateur;
 use App\vue\Template;
 use App\Utils\Utilitaire;
 
 Class PersonnageController extends Personnage {
     public function addPersonnage(){
+        // $tabNom = (new Utilisateur)->infoUser();
         $error = "";
         //tester si le formulaire
         if(isset($_POST['submit'])){
-            var_dump($_POST);
             //test si les champs sont remplis
             if(!empty($_POST['nom_personnage'])
             AND !empty($_POST['serveur_personnage']) AND !empty($_POST['classe_personnage']) 
@@ -33,5 +34,7 @@ Class PersonnageController extends Personnage {
                 $error = "Veuillez renseigner tous les champs du formulaire";
             }
         }
+        Template::render('header.php', 'Mon Compte', 'vueMonCompte.php', 'footer.php', 
+        $error, ['script.js', 'main.js'], ['styles.css', 'main.css']);
     }
 }
