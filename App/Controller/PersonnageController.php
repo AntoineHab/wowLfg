@@ -7,7 +7,8 @@ use App\Utils\Utilitaire;
 
 Class PersonnageController extends Personnage {
     public function addPersonnage(){
-        // $tabNom = (new Utilisateur)->infoUser();
+        $tab = (new Personnage);
+        $tab=$this->findAll();
         $error = "";
         //tester si le formulaire
         if(isset($_POST['submit'])){
@@ -35,6 +36,6 @@ Class PersonnageController extends Personnage {
             }
         }
         Template::render('header.php', 'Mon Compte', 'vueMonCompte.php', 'footer.php', 
-        $error, ['script.js', 'main.js'], ['styles.css', 'main.css']);
+        $error, ['script.js', 'main.js'], ['styles.css', 'main.css'], $tab);
     }
 }

@@ -4,6 +4,15 @@
     <div class ="space_big"></div>
     <h1>Bonjour <?=$_SESSION['nom']?></h1>
     <div class ="space_big"></div>
+    <?php foreach($tab as $perso):?>
+    <div class="inscription">
+    <p><?=$perso->getNom()?></p>
+    <p><?=$perso->getServeur()?></p>
+    <p><?=$perso->getClasse()?></p>
+    <p><?=$perso->getRole()?></p>
+    <p><?=$perso->getRio()?></p>
+    </div>
+    <?php endforeach?>
     <div class="inscription ">
         <div class="inscription label color_beige">
             <form action="" method="post" enctype="multipart/form-data">  

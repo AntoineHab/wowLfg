@@ -58,14 +58,16 @@ class Personnage extends BddConnect{
             $serveur = $this->serveur_personnage;
             $role = $this->role_personnage;
             $rio = $this->rio_personnage;
+            $user = $_SESSION['id'];
             $req = $this->connexion()->prepare(
                 "INSERT INTO personnage(nom_personnage, 
-                serveur_personnage, classe_personnage, role_personnage, rio_personnage) VALUES(?,?,?,?,?)");
+                serveur_personnage, classe_personnage, role_personnage, rio_personnage, id_utilisateur) VALUES(?,?,?,?,?,?)");
             $req->bindParam(1, $nom, \PDO::PARAM_STR);
             $req->bindParam(2, $serveur, \PDO::PARAM_STR);
             $req->bindParam(3, $classe, \PDO::PARAM_STR);
-            $req->bindParam(4, $role, \PDO::PARAM_INT);
+            $req->bindParam(4, $role, \PDO::PARAM_STR);
             $req->bindParam(5, $rio, \PDO::PARAM_STR);
+            $req->bindParam(6, $user, \PDO::PARAM_INT);
             $req->execute();
         } catch (\Exception $e) {
             die('Error : '.$e->getMessage());
@@ -77,7 +79,7 @@ class Personnage extends BddConnect{
             $nom = $this->nom_personnage;
             $serveur = $this->serveur_personnage;
             $req = $this->connexion()->prepare(
-                "SELECT id_personnage, nom_personnage, 
+                "SELECT id_personnage, nom_personnage,
                 serveur_personnage, classe_personnage
                 FROM personnage WHERE nom_personnage = ? and serveur_personnage = ?");
             $req->bindParam(1, $nom, \PDO::PARAM_STR);
@@ -85,6 +87,37 @@ class Personnage extends BddConnect{
             $req->setFetchMode(\PDO::FETCH_CLASS| \PDO::FETCH_PROPS_LATE, Utilisateur::class);
             $req->execute();
             return $req->fetch();
+        } catch (\Exception $e) {
+            die('Error : '.$e->getMessage());
+        }
+    }
+    public function findAll(){
+        try {
+            $user = $_SESSION['id'];
+            $req = $this->connexion()->prepare('SELECT 
+            id_personnage, nom_personnage, serveur_personnage, classe_personnage, rio_personnage
+            FROM personnage WHERE id_utilisateur = ?');
+            $req->bindParam(1, $user, \PDO::PARAM_INT);
+            return $req->fetchAll(\PDO::FETCH_CLASS| \PDO::FETCH_PROPS_LATE, Personnage::class);
+        } catch (\Exception $e) {
+            die('Error : '.$e->getMessage());
+        }
+    }
+    public function update(){
+        try {
+            $id = $this->id_chocoblast;
+            $slogan = $this->slogan_chocoblast;
+            $date = $this->date_chocoblast;
+            $auteur = $this->auteur_chocoblast->getId();
+            $cible = $this->cible_chocoblast->getId();
+            $req = $this->connexion()->prepare('UPDATE chocoblast SET slogan_chocoblast = ?, 
+            date_chocoblast = ?, cible_chocoblast = ? WHERE id_chocoblast = ? AND auteur_chocoblast = ?');
+            $req->bindParam(1, $slogan, \PDO::PARAM_STR);
+            $req->bindParam(2, $date, \PDO::PARAM_STR);
+            $req->bindParam(3, $cible, \PDO::PARAM_INT);
+            $req->bindParam(4, $id, \PDO::PARAM_INT);
+            $req->bindParam(5, $auteur, \PDO::PARAM_INT);
+            $req->execute();
         } catch (\Exception $e) {
             die('Error : '.$e->getMessage());
         }
