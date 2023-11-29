@@ -30,7 +30,7 @@ class Personnage extends BddConnect{
         $this->serveur_personnage = $serveur;
     }
     public function getClasse():?string{
-        return $this->password_utilisateur;
+        return $this->classe_personnage;
     }
     public function setClasse(?string $classe){
         $this->classe_personnage = $classe;
@@ -42,7 +42,7 @@ class Personnage extends BddConnect{
         $this->role_personnage = $role;
     }
     public function getRio():?string{
-        return $this->riko_personnage;
+        return $this->rio_personnage;
     }
     public function setRio(?string $rio){
         $this->rio_personnage = $rio;
@@ -95,9 +95,10 @@ class Personnage extends BddConnect{
         try {
             $user = $_SESSION['id'];
             $req = $this->connexion()->prepare('SELECT 
-            id_personnage, nom_personnage, serveur_personnage, classe_personnage, rio_personnage
+            id_personnage, nom_personnage, role_personnage, serveur_personnage, classe_personnage, rio_personnage
             FROM personnage WHERE id_utilisateur = ?');
             $req->bindParam(1, $user, \PDO::PARAM_INT);
+            $req->execute();
             return $req->fetchAll(\PDO::FETCH_CLASS| \PDO::FETCH_PROPS_LATE, Personnage::class);
         } catch (\Exception $e) {
             die('Error : '.$e->getMessage());

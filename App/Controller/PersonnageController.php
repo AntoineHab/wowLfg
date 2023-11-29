@@ -7,7 +7,7 @@ use App\Utils\Utilitaire;
 
 Class PersonnageController extends Personnage {
     public function addPersonnage(){
-        $tab = (new Personnage);
+        // $tab = (new Personnage);
         $tab=$this->findAll();
         $error = "";
         //tester si le formulaire
