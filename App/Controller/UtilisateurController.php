@@ -41,7 +41,7 @@ class UtilisateurController extends Utilisateur{
         $error, ['script.js', 'main.js'], ['styles.css', 'main.css']);
     }
     public function connexionUser(){   
-        $error ="";
+        $error ="Vous êtes déja connecté";
         //tester si le formulaire est submit
         if(isset($_POST['submit'])){
             //tester si les champs sont remplis
@@ -56,6 +56,7 @@ class UtilisateurController extends Utilisateur{
                             $_SESSION['connected'] = true;
                             $_SESSION['id'] = $user->getId();
                             $_SESSION['nom'] = $user->getNom();
+                            header("refresh:1;url=./moncompte");
                         }else {
                             $error = "Les informations de connexion ne sont pas valides";
                         }
@@ -66,7 +67,7 @@ class UtilisateurController extends Utilisateur{
             //Test les champs sont vides
             }else{
                 $error = "Veuillez renseigner tous les champs du formulaire";
-            }header("refresh:1;url=./moncompte");
+            }
         }
         
         Template::render('header.php', 'Connexion', 'vueConnexionUser.php', 'footer.php', 

@@ -3,6 +3,7 @@ namespace App\Model;
 use App\Utils\BddConnect;
 class Personnage extends BddConnect{
     //attributs
+    private int $id;
     private ?string $nom_personnage;
     private ?string $serveur_personnage;
     private ?string $classe_personnage;
@@ -12,10 +13,10 @@ class Personnage extends BddConnect{
 
     //Getters et Setters
     public function getId():?int{
-        return $this->id_utilisateur;
+        return $this->id_personnage;
     }
     public function setId(?int $id){
-        $this->id_utilisateur = $id;
+        $this->id_personnage = $id;
     }
     public function getNom():?string{
         return $this->nom_personnage;
@@ -61,7 +62,7 @@ class Personnage extends BddConnect{
             $user = $_SESSION['id'];
             $req = $this->connexion()->prepare(
                 "INSERT INTO personnage(nom_personnage, 
-                serveur_personnage, classe_personnage, role_personnage, rio_personnage, id_utilisateur) VALUES(?,?,?,?,?,?)");
+                serveur_personnage, classe_personnage, role_personnage, rio_personnage, id_utilisateur,statut_personnage) VALUES(?,?,?,?,?,?,1)");
             $req->bindParam(1, $nom, \PDO::PARAM_STR);
             $req->bindParam(2, $serveur, \PDO::PARAM_STR);
             $req->bindParam(3, $classe, \PDO::PARAM_STR);
@@ -73,6 +74,23 @@ class Personnage extends BddConnect{
             die('Error : '.$e->getMessage());
         }
     }
+    public function updateStatutPerso(){
+        try {
+            $user = $_SESSION['id'];
+            $nom= $this->getNom();
+            $serveur=$this->getServeur();
+            $req = $this->connexion()->prepare('UPDATE personnage SET 
+            statut_personnage = 0 WHERE nom_personnage = ? AND serveur_personnage = ? AND id_utilisateur = ?');
+            $req->bindParam(1, $nom, \PDO::PARAM_STR);
+            $req->bindParam(2, $serveur, \PDO::PARAM_STR);
+            $req->bindParam(3, $user, \PDO::PARAM_INT);
+            $req->execute();
+        } 
+        catch (\Exception $e) {
+            die('Error : '.$e->getMessage());
+        }
+    }
+   
     public function findOneBy(){
         try {
             //récupérer les données de l'objet
@@ -81,10 +99,10 @@ class Personnage extends BddConnect{
             $req = $this->connexion()->prepare(
                 "SELECT id_personnage, nom_personnage,
                 serveur_personnage, classe_personnage
-                FROM personnage WHERE nom_personnage = ? and serveur_personnage = ?");
+                FROM personnage WHERE nom_personnage = ? and serveur_personnage = ? and statut_personnage = 1");
             $req->bindParam(1, $nom, \PDO::PARAM_STR);
             $req->bindParam(2, $serveur, \PDO::PARAM_STR);
-            $req->setFetchMode(\PDO::FETCH_CLASS| \PDO::FETCH_PROPS_LATE, Utilisateur::class);
+            $req->setFetchMode(\PDO::FETCH_CLASS| \PDO::FETCH_PROPS_LATE, Personnage::class);
             $req->execute();
             return $req->fetch();
         } catch (\Exception $e) {
@@ -96,29 +114,10 @@ class Personnage extends BddConnect{
             $user = $_SESSION['id'];
             $req = $this->connexion()->prepare('SELECT 
             id_personnage, nom_personnage, role_personnage, serveur_personnage, classe_personnage, rio_personnage
-            FROM personnage WHERE id_utilisateur = ?');
+            FROM personnage WHERE id_utilisateur = ? AND statut_personnage = 1');
             $req->bindParam(1, $user, \PDO::PARAM_INT);
             $req->execute();
             return $req->fetchAll(\PDO::FETCH_CLASS| \PDO::FETCH_PROPS_LATE, Personnage::class);
-        } catch (\Exception $e) {
-            die('Error : '.$e->getMessage());
-        }
-    }
-    public function update(){
-        try {
-            $id = $this->id_chocoblast;
-            $slogan = $this->slogan_chocoblast;
-            $date = $this->date_chocoblast;
-            $auteur = $this->auteur_chocoblast->getId();
-            $cible = $this->cible_chocoblast->getId();
-            $req = $this->connexion()->prepare('UPDATE chocoblast SET slogan_chocoblast = ?, 
-            date_chocoblast = ?, cible_chocoblast = ? WHERE id_chocoblast = ? AND auteur_chocoblast = ?');
-            $req->bindParam(1, $slogan, \PDO::PARAM_STR);
-            $req->bindParam(2, $date, \PDO::PARAM_STR);
-            $req->bindParam(3, $cible, \PDO::PARAM_INT);
-            $req->bindParam(4, $id, \PDO::PARAM_INT);
-            $req->bindParam(5, $auteur, \PDO::PARAM_INT);
-            $req->execute();
         } catch (\Exception $e) {
             die('Error : '.$e->getMessage());
         }

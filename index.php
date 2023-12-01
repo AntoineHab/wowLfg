@@ -19,6 +19,9 @@ if (isset($_SESSION['connected'])){
         case '/wowLfg/':
             $homeController->getHome();
        break;
+       case '/wowLfg/connexion':
+            $userController->connexionUser();
+            break;
        case '/wowLfg/deconnexion':
             $userController->deconnexionUser();
             break;
@@ -27,8 +30,10 @@ if (isset($_SESSION['connected'])){
             break;
         case '/wowLfg/moncompte':
             $personnageController->addPersonnage();
-            break; 
-       default:
+            break;
+        case '/wowLfg/supprimerpersonnage':
+            $personnageController->supprimerPersonnage();
+        default:
            include './error.php';
            break; 
    }
@@ -46,7 +51,7 @@ else {
             break;    
         case '/wowLfg/calendrier':
             $eventController->getEvents();
-            break;  
+            break;
         default:
             include './error.php';
             break;

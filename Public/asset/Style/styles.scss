@@ -57,7 +57,9 @@ button:hover {
 
     cursor: pointer;
 }
-input {
+input, select, option{
+    font-family: "Semplicita Pro";
+    font-weight: 600;
     width: 175px;
     height: 25px;
     text-align: center;
@@ -70,10 +72,14 @@ input {
 }
 article {
     font-size: 2em;
+    
 }
 //Classes
 
 .space {
+    &_xshort{
+        height: 13px;
+    }
     &_short {
         height: 25px;
     }
@@ -222,5 +228,16 @@ article {
 .txt3 {
     grid-column: 3;
     margin : auto 10px auto;
+
+}
+
+.afficherPerso {
+    display : grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 1fr;
+    background-color: #170e09da;
+    border: solid black 1px;
+    margin: auto;
+    text-align: center;
 
 }

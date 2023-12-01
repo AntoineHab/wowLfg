@@ -25,6 +25,7 @@
                         <ul><label for="">Mot de passe :</label></ul>
                         <ul><input type="password" name="password_utilisateur" required></ul>
                         <ul><div class ="buttonLog"><button class ="go go_2 " type="submit" name="submit">Me Connecter</button></div></ul>
+                        <ul><?=$error?></ul>
                         </li>
                     </div>
                 </form>
