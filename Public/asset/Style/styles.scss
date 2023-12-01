@@ -15,7 +15,10 @@
     text-decoration: none; }
 
 body {
-    background-color: #170e09;
+    background-image: url(../content/Horde.jpg);
+    background-position: center;
+    background-size: cover; 
+    background-repeat: repeat-y;    
     font-family: "Semplicita Pro";
     color: #f7b10a;
 }
@@ -26,21 +29,26 @@ h1 {
 }
 h2{
     text-align: center;
-    padding-top : 5px;
-    padding-bottom: 5px;
-    font-size: 3em;
+    padding-top : .3125rem;
+    padding-bottom: .3125rem;
+    font-size: 2.5em;
+}
+h3 {
+    text-align: center;
+    color: #ebdec2;
+    font-size: 2em;
+    margin-bottom: 15px;
+    
 }
 
 ul {
     list-style-type: none;
     text-align: center;
-    // position: fixed; ?????
-    padding: none;
 }
 
 ul li {
     display: inline;
-    padding: 7px;
+    padding: .4375rem
 }
 
 a {
@@ -57,46 +65,53 @@ button:hover {
 
     cursor: pointer;
 }
-input, select, option{
+input, select{
     font-family: "Semplicita Pro";
     font-weight: 600;
-    width: 175px;
-    height: 25px;
+    width: 10.9375rem;
+    height: 1.5625rem;
     text-align: center;
     background-color: #ca9415;
-    border: solid 1px #170e09da;
-    border-radius: 8px;
+    border: solid .0625rem #170e09da;
+    border-radius: .5rem;
         &:focus {
             background-color: #ebdec2 ;
         }
+}
+option{
+    font-family: "Semplicita Pro";
+    font-weight: 600;
+    width: 10.9375rem;
+    height: 1.5625rem;
 }
 article {
     font-size: 2em;
     
 }
+
 //Classes
 
 .space {
     &_xshort{
-        height: 13px;
+        height: .8125rem;
     }
     &_short {
-        height: 25px;
+        height: 1.5625rem;
     }
     &_medium {
-        height: 50px;
+        height: 3.125rem;
     }
     &_big  {
-        height: 100px;            
+        height: 6.25rem;            
     }
     &_box { 
 
-        height: 1080px;
+        height: 67.5rem;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover; 
             &_1 {
-                background-image: url(../content/Horde.jpg);                    
+                background-image: url(../content/Horde.jpg);                 
             }
             &_2{
                 background-image: url(../content/Alliance.jpg);  
@@ -134,15 +149,15 @@ article {
     text-align: center;
     background-color: #ca9415;
     color: #170e09;
-    padding: 15px 32px;
+    padding: .9375rem 2rem;
     border: none;
-    border-radius: 12px;
-    font-size: 2em; 
+    border-radius: .75rem;
+    font-size: 2em;
     &_2{
         background-color: #0074e0;
         color : #ebdec2;
         font-size: 1.1em; 
-        margin-top: 15px;
+        margin-top: .9375rem;
         &:hover {
             background-color: #ca9415;
             color: #170e09;
@@ -152,8 +167,8 @@ article {
         background-color: #0074e0;
         color : #ebdec2;
         font-size: 1.1em; 
-        margin-top: 15px;
-        padding: 15px 59px;
+        margin-top: .9375rem;
+        padding: .9375rem 3.6875rem;
         &:hover {
             background-color: #ca9415;
             color: #170e09;
@@ -167,7 +182,7 @@ article {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     text-align: center;
-    height: 250px;
+    height: 15.625rem;
     background-color: #170e09da;
     margin-left : 10%;
     margin-right: 10%;
@@ -225,6 +240,18 @@ article {
     font-size: 1.5em;
 
 }
+.labelPersonnage {
+    border: solid black 5px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #170e09da;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 1.5em;
+
+}
 .txt3 {
     grid-column: 3;
     margin : auto 10px auto;
@@ -232,12 +259,54 @@ article {
 }
 
 .afficherPerso {
-    display : grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-template-rows: 1fr;
-    background-color: #170e09da;
-    border: solid black 1px;
     margin: auto;
     text-align: center;
-
+    max-width: 43.75rem;
+    > li {
+        display : grid;
+        grid-template-columns: repeat(7,1fr);
+        grid-template-rows: 1fr;
+        >ul:nth-child(1){
+                grid-column: 1;
+                color : green;
+            }
+            :nth-child(2){
+                grid-column: 2;
+                color: red;
+            }
+            :nth-child(3){
+                grid-column: 3;
+                color: violet;
+            }
+            :nth-child(4){
+                grid-column: 4;
+                color: violet;
+            }
+            :nth-child(5){
+                grid-column: 5;
+                color: violet;
+            }
+            :nth-child(6){
+                grid-column: 7;
+                color: violet;
+            }
+        
+    }
+.deletePerso{
+        background-color: #0074e0;
+        border-radius: .625rem;
+        border: #170e09 2px solid;
+        padding: .4375rem;
+        opacity: 0.8;
+        box-shadow: none;
+        > a {
+            color:#ebdec2;
+        }
+       &:hover {
+        opacity: 1;
+        background-color: #0074e0;
+        color: #170e09;
+       } 
+    } 
+ 
 }

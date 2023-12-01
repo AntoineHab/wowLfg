@@ -27,6 +27,7 @@ Class PersonnageController extends Personnage {
                         //Ajouter le personage en BDD
                         $this->add();
                         $error = "Le personnage a été ajouté !";
+                        header("refresh:0;url=./moncompte");
                     }    
                     else{
                         $error = "Le personnage existe déja";

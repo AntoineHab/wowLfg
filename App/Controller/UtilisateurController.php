@@ -41,7 +41,7 @@ class UtilisateurController extends Utilisateur{
         $error, ['script.js', 'main.js'], ['styles.css', 'main.css']);
     }
     public function connexionUser(){   
-        $error ="Vous êtes déja connecté";
+        $error ="";
         //tester si le formulaire est submit
         if(isset($_POST['submit'])){
             //tester si les champs sont remplis

@@ -12,7 +12,10 @@
 }
 
 body {
-  background-color: #170e09;
+  background-image: url(../content/Horde.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat-y;
   font-family: "Semplicita Pro";
   color: #f7b10a;
 }
@@ -24,20 +27,26 @@ h1 {
 
 h2 {
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-size: 3em;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  font-size: 2.5em;
+}
+
+h3 {
+  text-align: center;
+  color: #ebdec2;
+  font-size: 2em;
+  margin-bottom: 15px;
 }
 
 ul {
   list-style-type: none;
   text-align: center;
-  padding: none;
 }
 
 ul li {
   display: inline;
-  padding: 7px;
+  padding: 0.4375rem;
 }
 
 a {
@@ -54,18 +63,25 @@ button:hover {
   cursor: pointer;
 }
 
-input, select, option {
+input, select {
   font-family: "Semplicita Pro";
   font-weight: 600;
-  width: 175px;
-  height: 25px;
+  width: 10.9375rem;
+  height: 1.5625rem;
   text-align: center;
   background-color: #ca9415;
-  border: solid 1px rgba(23, 14, 9, 0.8549019608);
-  border-radius: 8px;
+  border: solid 0.0625rem rgba(23, 14, 9, 0.8549019608);
+  border-radius: 0.5rem;
 }
-input:focus, select:focus, option:focus {
+input:focus, select:focus {
   background-color: #ebdec2;
+}
+
+option {
+  font-family: "Semplicita Pro";
+  font-weight: 600;
+  width: 10.9375rem;
+  height: 1.5625rem;
 }
 
 article {
@@ -73,19 +89,19 @@ article {
 }
 
 .space_xshort {
-  height: 13px;
+  height: 0.8125rem;
 }
 .space_short {
-  height: 25px;
+  height: 1.5625rem;
 }
 .space_medium {
-  height: 50px;
+  height: 3.125rem;
 }
 .space_big {
-  height: 100px;
+  height: 6.25rem;
 }
 .space_box {
-  height: 1080px;
+  height: 67.5rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -128,16 +144,16 @@ article {
   text-align: center;
   background-color: #ca9415;
   color: #170e09;
-  padding: 15px 32px;
+  padding: 0.9375rem 2rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   font-size: 2em;
 }
 .go_2 {
   background-color: #0074e0;
   color: #ebdec2;
   font-size: 1.1em;
-  margin-top: 15px;
+  margin-top: 0.9375rem;
 }
 .go_2:hover {
   background-color: #ca9415;
@@ -147,8 +163,8 @@ article {
   background-color: #0074e0;
   color: #ebdec2;
   font-size: 1.1em;
-  margin-top: 15px;
-  padding: 15px 59px;
+  margin-top: 0.9375rem;
+  padding: 0.9375rem 3.6875rem;
 }
 .go_3:hover {
   background-color: #ca9415;
@@ -161,7 +177,7 @@ article {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   text-align: center;
-  height: 250px;
+  height: 15.625rem;
   background-color: rgba(23, 14, 9, 0.8549019608);
   margin-left: 10%;
   margin-right: 10%;
@@ -221,17 +237,70 @@ article {
   font-size: 1.5em;
 }
 
+.labelPersonnage {
+  border: solid black 5px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(23, 14, 9, 0.8549019608);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 1.5em;
+}
+
 .txt3 {
   grid-column: 3;
   margin: auto 10px auto;
 }
 
 .afficherPerso {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr;
-  background-color: rgba(23, 14, 9, 0.8549019608);
-  border: solid black 1px;
   margin: auto;
   text-align: center;
+  max-width: 43.75rem;
+}
+.afficherPerso > li {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr;
+}
+.afficherPerso > li > ul:nth-child(1) {
+  grid-column: 1;
+  color: green;
+}
+.afficherPerso > li :nth-child(2) {
+  grid-column: 2;
+  color: red;
+}
+.afficherPerso > li :nth-child(3) {
+  grid-column: 3;
+  color: violet;
+}
+.afficherPerso > li :nth-child(4) {
+  grid-column: 4;
+  color: violet;
+}
+.afficherPerso > li :nth-child(5) {
+  grid-column: 5;
+  color: violet;
+}
+.afficherPerso > li :nth-child(6) {
+  grid-column: 7;
+  color: violet;
+}
+.afficherPerso .deletePerso {
+  background-color: #0074e0;
+  border-radius: 0.625rem;
+  border: #170e09 2px solid;
+  padding: 0.4375rem;
+  opacity: 0.8;
+  box-shadow: none;
+}
+.afficherPerso .deletePerso > a {
+  color: #ebdec2;
+}
+.afficherPerso .deletePerso:hover {
+  opacity: 1;
+  background-color: #0074e0;
+  color: #170e09;
 }/*# sourceMappingURL=styles.css.map */

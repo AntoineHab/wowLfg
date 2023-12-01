@@ -19,9 +19,6 @@ if (isset($_SESSION['connected'])){
         case '/wowLfg/':
             $homeController->getHome();
        break;
-       case '/wowLfg/connexion':
-            $userController->connexionUser();
-            break;
        case '/wowLfg/deconnexion':
             $userController->deconnexionUser();
             break;

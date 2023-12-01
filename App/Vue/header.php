@@ -10,7 +10,7 @@
             <ul>
                 <?php if(isset($_SESSION['connected'])):?>
                 <li><a href="/wowLfg/moncompte">Mon compte</a></li>
-                <li><a href="/wowLfg/deconnexion">Se deconnecter</a></li>
+                <li><a href="/wowLfg/deconnexion">Deconnexion</a></li>
                 <?php else:?>
                 <li><a href="/wowLfg/connexion">Connexion</a></li>
                 <li><a href="/wowLfg/inscription">Inscription</a></li>

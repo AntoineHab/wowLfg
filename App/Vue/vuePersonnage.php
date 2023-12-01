@@ -1,11 +1,13 @@
 <?php foreach($tab as $perso):?>
-    <div class="afficherPerso">
-    <p><?=$perso->getNom()?></p>
-    <p><?=$perso->getServeur()?></p>
-    <p><?=$perso->getClasse()?></p>
-    <p><?=$perso->getRole()?></p>
-    <p><a href="<?=$perso->getRio()?>" target='_blank'>Raider.io</a></p>
-    <p><a href="/wowLfg/supprimerpersonnage?nom=<?=$perso->getNom()?>&serveur=<?=$perso->getServeur()?>">Supprimer</a></p>
+    <div class="afficherPerso listeEtAjout_g3">
+        <li class="labelPersonnage">
+        <ul><p><?=$perso->getNom()?></p></ul>
+        <ul><p><?=$perso->getServeur()?></p></ul>
+        <ul><p><?=$perso->getClasse()?></p></ul>
+        <ul><p><?=$perso->getRole()?></p></ul>
+        <ul><p><a href="<?=$perso->getRio()?>" target='_blank'>Raider.io</a></p></ul>
+        <ul><button class="deletePerso"><a href="/wowLfg/supprimerpersonnage?nom=<?=$perso->getNom()?>&serveur=<?=$perso->getServeur()?>">Supprimer</a></button></ul>
+        </li>
     </div>
     <div class ="space_xshort"></div>
 <?php endforeach?>

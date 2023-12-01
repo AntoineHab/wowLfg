@@ -4,11 +4,16 @@
     <div class ="space_big"></div>
     <h1>Bonjour <?=$_SESSION['nom']?></h1>
     <div class ="space_medium"></div>
+    <div class = "listeEtAjout">
+    <?php if(!empty($tab)):?>
+    <h3 class="listeEtAjout_g1">Vos Personnages :</h3>
     <?php include 'vuePersonnage.php' ?>
-    <div class ="space_big"></div>
-    <div class="inscription ">
-        <div class="inscription label color_beige">
-            <form action="" method="post" enctype="multipart/form-data">  
+    <?php endif;?>
+    <div class ="space_medium"></div>
+    <h3 class="listeEtAjout_g2">Ajouter un Personnage :</h3>
+    <div class="listeEtAjout_g4 ">
+        <div class="inscription ">
+            <form action="" method="post" enctype="multipart/form-data" class="label color_beige">  
                 <li>
                 <ul><label for="nom_personnage">Nom du personnage :</label></ul>
                 <ul><input type="text" name="nom_personnage"required></ul>
@@ -45,8 +50,8 @@
                 </li>  
             </form>
         </div>
+    </div> 
     </div>
     <div class="space_medium"></div>
 </div>
-    
 <?php $content = ob_get_clean()?>
