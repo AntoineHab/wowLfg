@@ -1,14 +1,20 @@
 <?php
 namespace App\Controller;
 use App\Model\Personnage;
+use App\Model\Role;
+use App\Model\Classe;
 use App\Model\Utilisateur;
 use App\vue\Template;
 use App\Utils\Utilitaire;
 
 Class PersonnageController extends Personnage {
     public function addPersonnage(){
-        // $tab = (new Personnage);
         $tab=$this->findAll();
+        $roleTab = (new Role)->getAllRoles();
+        // $roleTab = $role->getAllRoles();
+        $classeTab = (new Classe)->getAllClasses();
+        var_dump($roleTab);
+        // $classeTab = $classe;
         $error = "";
         //tester si le formulaire
         if(isset($_POST['submit'])){
@@ -37,7 +43,7 @@ Class PersonnageController extends Personnage {
             }
         }
         Template::render('header.php', 'Mon Compte', 'vueMonCompte.php', 'footer.php', 
-        $error, ['script.js', 'main.js'], ['styles.css', 'main.css'], $tab);
+        $error, ['script.js', 'main.js'], ['styles.css', 'main.css'], $tab, $classeTab, $roleTab);
     }
     public function supprimerPersonnage(){
         $error = "";

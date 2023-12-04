@@ -54,7 +54,5 @@ else {
             $homeController->get404();
             break;
     }
-    
 }
-
 ?>

@@ -30,17 +30,17 @@ class Personnage extends BddConnect{
     public function setServeur(?string $serveur){
         $this->serveur_personnage = $serveur;
     }
-    public function getClasse():?string{
-        return $this->classe_personnage;
+    public function getClasse():?int{
+        return $this->id_classe;
     }
-    public function setClasse(?string $classe){
-        $this->classe_personnage = $classe;
+    public function setClasse(?int $classe){
+        $this->id_classe = $classe;
     }
-    public function getRole():?string{
+    public function getRole():?int{
         return $this->role_personnage;
     }
-    public function setRole(?string $role){
-        $this->role_personnage = $role;
+    public function setRole(?int $role){
+        $this->id_role = $role;
     }
     public function getRio():?string{
         return $this->rio_personnage;
@@ -62,11 +62,11 @@ class Personnage extends BddConnect{
             $user = $_SESSION['id'];
             $req = $this->connexion()->prepare(
                 "INSERT INTO personnage(nom_personnage, 
-                serveur_personnage, classe_personnage, role_personnage, rio_personnage, id_utilisateur,statut_personnage) VALUES(?,?,?,?,?,?,1)");
+                serveur_personnage, id_classe, id_rolee, rio_personnage, id_utilisateur,statut_personnage) VALUES(?,?,?,?,?,?,1)");
             $req->bindParam(1, $nom, \PDO::PARAM_STR);
             $req->bindParam(2, $serveur, \PDO::PARAM_STR);
-            $req->bindParam(3, $classe, \PDO::PARAM_STR);
-            $req->bindParam(4, $role, \PDO::PARAM_STR);
+            $req->bindParam(3, $classe, \PDO::PARAM_INT);
+            $req->bindParam(4, $role, \PDO::PARAM_INT);
             $req->bindParam(5, $rio, \PDO::PARAM_STR);
             $req->bindParam(6, $user, \PDO::PARAM_INT);
             $req->execute();
@@ -113,7 +113,7 @@ class Personnage extends BddConnect{
         try {
             $user = $_SESSION['id'];
             $req = $this->connexion()->prepare('SELECT 
-            id_personnage, nom_personnage, role_personnage, serveur_personnage, classe_personnage, rio_personnage
+            id_personnage, nom_personnage, id_rolee, serveur_personnage, id_classe, rio_personnage
             FROM personnage WHERE id_utilisateur = ? AND statut_personnage = 1');
             $req->bindParam(1, $user, \PDO::PARAM_INT);
             $req->execute();
@@ -123,3 +123,4 @@ class Personnage extends BddConnect{
         }
     }
 }
+?>

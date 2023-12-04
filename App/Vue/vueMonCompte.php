@@ -21,26 +21,16 @@
                 <ul><input type="text" name="serveur_personnage" required></ul>
                 <ul><label for="classe_personnage">Classe :</label></ul>
                 <ul><select name="classe_personnage" >
-                    <option value="Guerrier">Guerrier</option>
-                    <option value="Paladin">Paladin</option>
-                    <option value="Chasseur">Chasseur</option>
-                    <option value="Moine">Moine</option>
-                    <option value="Voleur">Voleur</option>
-                    <option value="Chevalier de la mort">Chevalier de la mort</option>
-                    <option value="Prêtre">Prêtre</option>
-                    <option value="Chasseur de démon">Chasseur de démon</option>
-                    <option value="Démoniste">Démoniste</option>
-                    <option value="Mage">Mage</option>
-                    <option value="Chaman">Chaman</option>
-                    <option value="Druide">Druide</option>
-                    <option value="Evocateur">Evocateur</option>
+                    <?php foreach($classeTab as $classe):?>
+                    <option value="<?=$classe->getId()?>"><?=$classe->getNom()?></option>
+                    <?php endforeach?>
                     </select>
                 </ul>
                 <ul><label for="role_personnage">Rôle :</label></ul>
                 <ul><select name="role_personnage" >
-                    <option value="Tank">Tank</option>
-                    <option value="Heal">Heal</option>
-                    <option value="Dps">Dps</option>
+                    <?php foreach($roleTab as $role):?>
+                    <option value="<?=$role->getId()?>"><?=$role->getNom()?></option>
+                    <?php endforeach?>
                     </select>
                 </ul>
                 <ul><label for="rio_personnage">Lien RIO :</label></ul>
