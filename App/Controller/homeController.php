@@ -9,7 +9,7 @@ class HomeController{
     }
     public function get404(){
         $error = "";
-        Template::render('navbar.php', 'Error 404', 'vueError.php', 'footer.php', 
+        Template::render('header.php', 'Error 404', 'vueError.php', 'footer.php', 
         $error, ['script.js'], ['style.css']);
     }
 }

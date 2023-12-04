@@ -52,7 +52,7 @@ Class PersonnageController extends Personnage {
                 //qui existe ou false
                 if($this->findOneBy()){
                     $this->updateStatutPerso();
-                    $error = 'le personnage a été supprimé';
+                    $error = 'le personnage '.$this->getNom().'a été supprimé';
                 }
                 //Test le personnage n'existe pas
                 else{
@@ -68,8 +68,8 @@ Class PersonnageController extends Personnage {
         else{
             $error = 'le paramètre n\'existe pas';
         }
-        Template::render('header.php', 'Suprimmer', 'vueSupprimerPerso.php','', 
+        Template::render('header.php', 'Supprimer', 'vueSupprimerPerso.php','', 
         $error, ['script.js', 'main.js'], ['styles.css', 'main.css']);
-        header("refresh:10;url=./moncompte");
+        header("refresh:2;url=./moncompte");
     }
 }

@@ -30,9 +30,9 @@ if (isset($_SESSION['connected'])){
             break;
         case '/wowLfg/supprimerpersonnage':
             $personnageController->supprimerPersonnage();
+            break;
         default:
-        //    include './error.php';
-        var_dump($path);
+            $homeController->get404();
            break; 
    }
 }
@@ -51,7 +51,7 @@ else {
             $eventController->getEvents();
             break;
         default:
-            include './error.php';
+            $homeController->get404();
             break;
     }
     
