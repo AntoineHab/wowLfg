@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller;
 use App\Model\Personnage;
-use App\Model\Role;
+use App\Model\Rolee;
 use App\Model\Classe;
 use App\Model\Utilisateur;
 use App\vue\Template;
@@ -10,23 +10,21 @@ use App\Utils\Utilitaire;
 Class PersonnageController extends Personnage {
     public function addPersonnage(){
         $tab=$this->findAll();
-        $roleTab = (new Role)->getAllRoles();
-        // $roleTab = $role->getAllRoles();
+        $roleeTab = (new Rolee)->getAllRolees();
         $classeTab = (new Classe)->getAllClasses();
-        var_dump($roleTab);
         // $classeTab = $classe;
         $error = "";
         //tester si le formulaire
         if(isset($_POST['submit'])){
             //test si les champs sont remplis
             if(!empty($_POST['nom_personnage'])
-            AND !empty($_POST['serveur_personnage']) AND !empty($_POST['classe_personnage']) 
-            AND !empty($_POST['role_personnage']) AND !empty($_POST['rio_personnage'])){   
+            AND !empty($_POST['serveur_personnage']) AND !empty($_POST['id_classe']) 
+            AND !empty($_POST['id_rolee']) AND !empty($_POST['rio_personnage'])){   
                     //setter les valeurs à l'objet personnageController
                     $this->setNom(Utilitaire::cleanInput($_POST['nom_personnage']));
                     $this->setServeur(Utilitaire::cleanInput($_POST['serveur_personnage']));
-                    $this->setClasse(Utilitaire::cleanInput($_POST['classe_personnage']));
-                    $this->setRole(Utilitaire::cleanInput($_POST['role_personnage']));
+                    $this->setClasse(Utilitaire::cleanInput($_POST['id_classe']));
+                    $this->setRole(Utilitaire::cleanInput($_POST['id_rolee']));
                     $this->setRio(Utilitaire::cleanInput($_POST['rio_personnage']));
                     //tester si le personnage existe
                     if(!$this->findOneBy()){
@@ -43,7 +41,7 @@ Class PersonnageController extends Personnage {
             }
         }
         Template::render('header.php', 'Mon Compte', 'vueMonCompte.php', 'footer.php', 
-        $error, ['script.js', 'main.js'], ['styles.css', 'main.css'], $tab, $classeTab, $roleTab);
+        $error, ['script.js', 'main.js'], ['styles.css', 'main.css'], $tab, $classeTab, $roleeTab);
     }
     public function supprimerPersonnage(){
         $error = "";

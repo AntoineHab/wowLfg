@@ -37,10 +37,10 @@ class Personnage extends BddConnect{
         $this->id_classe = $classe;
     }
     public function getRole():?int{
-        return $this->role_personnage;
+        return $this->id_rolee;
     }
     public function setRole(?int $role){
-        $this->id_role = $role;
+        $this->id_rolee = $role;
     }
     public function getRio():?string{
         return $this->rio_personnage;
@@ -55,9 +55,9 @@ class Personnage extends BddConnect{
         try {
             //récupérer les données de l'objet
             $nom = $this->nom_personnage;
-            $classe = $this->classe_personnage;
+            $classe = $this->id_classe;
             $serveur = $this->serveur_personnage;
-            $role = $this->role_personnage;
+            $rolee = $this->id_rolee;
             $rio = $this->rio_personnage;
             $user = $_SESSION['id'];
             $req = $this->connexion()->prepare(
@@ -66,7 +66,7 @@ class Personnage extends BddConnect{
             $req->bindParam(1, $nom, \PDO::PARAM_STR);
             $req->bindParam(2, $serveur, \PDO::PARAM_STR);
             $req->bindParam(3, $classe, \PDO::PARAM_INT);
-            $req->bindParam(4, $role, \PDO::PARAM_INT);
+            $req->bindParam(4, $rolee, \PDO::PARAM_INT);
             $req->bindParam(5, $rio, \PDO::PARAM_STR);
             $req->bindParam(6, $user, \PDO::PARAM_INT);
             $req->execute();
@@ -98,7 +98,7 @@ class Personnage extends BddConnect{
             $serveur = $this->serveur_personnage;
             $req = $this->connexion()->prepare(
                 "SELECT id_personnage, nom_personnage,
-                serveur_personnage, classe_personnage
+                serveur_personnage, id_classe
                 FROM personnage WHERE nom_personnage = ? and serveur_personnage = ? and statut_personnage = 1");
             $req->bindParam(1, $nom, \PDO::PARAM_STR);
             $req->bindParam(2, $serveur, \PDO::PARAM_STR);

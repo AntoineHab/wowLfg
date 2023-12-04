@@ -19,15 +19,15 @@
                 <ul><input type="text" name="nom_personnage"required></ul>
                 <ul><label for="serveur_personnage">Serveur :</label></ul>
                 <ul><input type="text" name="serveur_personnage" required></ul>
-                <ul><label for="classe_personnage">Classe :</label></ul>
-                <ul><select name="classe_personnage" >
+                <ul><label for="id_classe">Classe :</label></ul>
+                <ul><select name="id_classe">
                     <?php foreach($classeTab as $classe):?>
                     <option value="<?=$classe->getId()?>"><?=$classe->getNom()?></option>
                     <?php endforeach?>
                     </select>
                 </ul>
-                <ul><label for="role_personnage">Rôle :</label></ul>
-                <ul><select name="role_personnage" >
+                <ul><label for="id_rolee">Rôle :</label></ul>
+                <ul><select name="id_rolee">
                     <?php foreach($roleTab as $role):?>
                     <option value="<?=$role->getId()?>"><?=$role->getNom()?></option>
                     <?php endforeach?>
