@@ -268,29 +268,22 @@ article {
         grid-template-rows: 1fr;
         >ul:nth-child(1){
                 grid-column: 1;
-                color : green;
             }
             :nth-child(2){
                 grid-column: 2;
-                color: red;
             }
             :nth-child(3){
                 grid-column: 3;
-                color: violet;
             }
             :nth-child(4){
                 grid-column: 4;
-                color: violet;
             }
             :nth-child(5){
                 grid-column: 5;
-                color: violet;
             }
             :nth-child(6){
                 grid-column: 7;
-                color: violet;
             }
-        
     }
 .deletePerso{
         background-color: #0074e0;
@@ -308,5 +301,10 @@ article {
         color: #170e09;
        } 
     } 
- 
+.misejour{
+    color:blue;
+}
+#text {
+    display: none;
+}
 }

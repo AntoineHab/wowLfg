@@ -266,27 +266,21 @@ article {
 }
 .afficherPerso > li > ul:nth-child(1) {
   grid-column: 1;
-  color: green;
 }
 .afficherPerso > li :nth-child(2) {
   grid-column: 2;
-  color: red;
 }
 .afficherPerso > li :nth-child(3) {
   grid-column: 3;
-  color: violet;
 }
 .afficherPerso > li :nth-child(4) {
   grid-column: 4;
-  color: violet;
 }
 .afficherPerso > li :nth-child(5) {
   grid-column: 5;
-  color: violet;
 }
 .afficherPerso > li :nth-child(6) {
   grid-column: 7;
-  color: violet;
 }
 .afficherPerso .deletePerso {
   background-color: #0074e0;
@@ -303,4 +297,10 @@ article {
   opacity: 1;
   background-color: #0074e0;
   color: #170e09;
+}
+.afficherPerso .misejour {
+  color: blue;
+}
+.afficherPerso #text {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

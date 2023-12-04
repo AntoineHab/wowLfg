@@ -31,7 +31,8 @@ if (isset($_SESSION['connected'])){
         case '/wowLfg/supprimerpersonnage':
             $personnageController->supprimerPersonnage();
         default:
-           include './error.php';
+        //    include './error.php';
+        var_dump($path);
            break; 
    }
 }

@@ -67,10 +67,9 @@ Class PersonnageController extends Personnage {
         //le paramètre $_GET['nom'] n'existe pas
         else{
             $error = 'le paramètre n\'existe pas';
-
         }
-        Template::render('header.php', 'Suprimmer', 'vueSupprimerPerso.php', 'footer.php', 
+        Template::render('header.php', 'Suprimmer', 'vueSupprimerPerso.php','', 
         $error, ['script.js', 'main.js'], ['styles.css', 'main.css']);
-        header("refresh:1;url=./moncompte");
+        header("refresh:10;url=./moncompte");
     }
 }
