@@ -12,4 +12,9 @@ class HomeController{
         Template::render('header.php', 'Error 404', 'vueError.php', 'footer.php', 
         $error, ['script.js'], ['style.css']);
     }
+    public function getNotConnected(){
+        $error = "";
+        Template::render('header.php', 'Vous n\'êtes pas connecté', 'vueNotConnected.php', 'footer.php', 
+        $error, ['script.js'], ['styles.css', 'main.css']);
+    }
 }

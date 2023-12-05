@@ -34,6 +34,6 @@
         </article>
         <div class="space_big">  
         </div>
-        <div class="centered"><a href="/wowLfg/calendrier"><button class ="go" >C'est parti !</button></a></div>
+        <div class="centered"><a href="/wowLfg/connexion"><button class ="go" >C'est parti !</button></a></div>
     </div>
 <?php $content = ob_get_clean()?>

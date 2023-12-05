@@ -44,6 +44,9 @@ else {
         case '/wowLfg/connexion':
             $userController->connexionUser();
             break;
+        case '/wowLfg/moncompte':
+            $homeController->getNotConnected();
+            break;
         case '/wowLfg/inscription':
             $userController->addUser();
             break;    
