@@ -4,14 +4,13 @@
     <div class ="space_big"></div>
     <h1>Bonjour <?=$_SESSION['nom']?></h1>
     <div class ="space_medium"></div>
-    <div class = "listeEtAjout">
     <?php if(!empty($tab)):?>
-    <h3 class="listeEtAjout_g1">Vos Personnages :</h3>
+    <h3 >Vos Personnages :</h3>
     <?php include 'vuePersonnage.php' ?>
     <?php endif;?>
     <div class ="space_medium"></div>
-    <h3 class="listeEtAjout_g2">Ajouter un Personnage :</h3>
-    <div class="listeEtAjout_g4 ">
+    <h3>Ajouter un Personnage :</h3>
+    <div>
         <div class="inscription ">
             <form action="" method="post" enctype="multipart/form-data" class="label color_beige">  
                 <li>
@@ -19,15 +18,15 @@
                 <ul><input type="text" name="nom_personnage"required></ul>
                 <ul><label for="serveur_personnage">Serveur :</label></ul>
                 <ul><input type="text" name="serveur_personnage" required></ul>
-                <ul><label for="id_classe">Classe :</label></ul>
-                <ul><select name="id_classe">
+                <ul><label for="id_classe_personnage">Classe :</label></ul>
+                <ul><select name="id_classe_personnage">
                     <?php foreach($classeTab as $classe):?>
                     <option value="<?=$classe->getId()?>"><?=$classe->getNom()?></option>
                     <?php endforeach?>
                     </select>
                 </ul>
-                <ul><label for="id_rolee">Rôle :</label></ul>
-                <ul><select name="id_rolee">
+                <ul><label for="id_rolee_personnage">Rôle :</label></ul>
+                <ul><select name="id_rolee_personnage">
                     <?php foreach($roleTab as $role):?>
                     <option value="<?=$role->getId()?>"><?=$role->getNom()?></option>
                     <?php endforeach?>
@@ -41,7 +40,6 @@
             </form>
         </div>
     </div> 
-    </div>
     <div class="space_medium"></div>
 </div>
 <?php $content = ob_get_clean()?>

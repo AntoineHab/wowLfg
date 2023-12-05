@@ -18,13 +18,13 @@ Class PersonnageController extends Personnage {
         if(isset($_POST['submit'])){
             //test si les champs sont remplis
             if(!empty($_POST['nom_personnage'])
-            AND !empty($_POST['serveur_personnage']) AND !empty($_POST['id_classe']) 
-            AND !empty($_POST['id_rolee']) AND !empty($_POST['rio_personnage'])){   
+            AND !empty($_POST['serveur_personnage']) AND !empty($_POST['id_classe_personnage']) 
+            AND !empty($_POST['id_rolee_personnage']) AND !empty($_POST['rio_personnage'])){   
                     //setter les valeurs à l'objet personnageController
                     $this->setNom(Utilitaire::cleanInput($_POST['nom_personnage']));
                     $this->setServeur(Utilitaire::cleanInput($_POST['serveur_personnage']));
-                    $this->setClasse(Utilitaire::cleanInput($_POST['id_classe']));
-                    $this->setRole(Utilitaire::cleanInput($_POST['id_rolee']));
+                    $this->setClasse(Utilitaire::cleanInput($_POST['id_classe_personnage']));
+                    $this->setRole(Utilitaire::cleanInput($_POST['id_rolee_personnage']));
                     $this->setRio(Utilitaire::cleanInput($_POST['rio_personnage']));
                     //tester si le personnage existe
                     if(!$this->findOneBy()){

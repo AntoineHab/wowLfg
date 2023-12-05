@@ -247,6 +247,7 @@ article {
   justify-content: center;
   padding: 20px;
   font-size: 1.5em;
+  margin: auto;
 }
 
 .txt3 {
@@ -255,9 +256,12 @@ article {
 }
 
 .afficherPerso {
-  margin: auto;
   text-align: center;
-  max-width: 43.75rem;
+  max-width: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 80%;
+  margin: auto;
 }
 .afficherPerso > li {
   display: grid;
@@ -281,6 +285,12 @@ article {
 }
 .afficherPerso > li :nth-child(6) {
   grid-column: 7;
+}
+.afficherPerso > li > p {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  color: #0074e0;
 }
 .afficherPerso .deletePerso {
   background-color: #0074e0;

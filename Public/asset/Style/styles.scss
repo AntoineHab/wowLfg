@@ -250,6 +250,7 @@ article {
     justify-content: center;
     padding: 20px;
     font-size: 1.5em;
+    margin: auto;
 
 }
 .txt3 {
@@ -259,13 +260,17 @@ article {
 }
 
 .afficherPerso {
-    margin: auto;
     text-align: center;
-    max-width: 43.75rem;
+    max-width: 100%;
+    width:fit-content;
+    min-width: 80%;
+    margin: auto;
+    
     > li {
         display : grid;
         grid-template-columns: repeat(7,1fr);
         grid-template-rows: 1fr;
+        
         >ul:nth-child(1){
                 grid-column: 1;
             }
@@ -274,6 +279,7 @@ article {
             }
             :nth-child(3){
                 grid-column: 3;
+                
             }
             :nth-child(4){
                 grid-column: 4;
@@ -283,6 +289,12 @@ article {
             }
             :nth-child(6){
                 grid-column: 7;
+            }
+            >p {
+                display: flex;
+                flex-wrap: nowrap;
+                white-space: nowrap;
+                color: #0074e0;
             }
     }
 .deletePerso{
