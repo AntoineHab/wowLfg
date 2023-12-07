@@ -15,9 +15,9 @@
             nos recherche de groupe de Raid et de Donjon ! L'utilisation est très facile, que tu sois
             Raid leader ou Pick UP, il te suffit de te connecter et de te rendre sur la page calendrier !
         </article>
-        <div class ="space_big"></div><div class="fleche"><img src="./Public/asset/content/fleche.png" alt="fleche" class ="homefleche"></div>
+        <div class ="space_big"></div><div class="fleche"><a href="#ancre"><img src="./Public/asset/content/fleche.png" alt="fleche" class ="homefleche"></a></div>
     </div>
-    <div class="space_box space_box_2">
+    <div class="space_box space_box_2"id="ancre">
         <div class="space_big">  
         </div>
         <h1>Comment ça marche ?</h1>
@@ -25,7 +25,7 @@
         </div>
         <div class="space_big">  
         </div>
-        <article class="color_beige centered blur">
+        <article class="color_beige centered blur" >
             Pour utiliser le site, connecte toi à ton compte battle.net via le boutton connexion en haut de page,
             puis va sur la page calendrier pour voir les Raid / groupes M+ disponible ! Pour s'inscrire, rien de plus simple ! Cliques sur
             l'evênement qui t'interesses pour afficher les informations de ce dernier; si ça te convient, appuis sur <em>s'inscrire</em> !
