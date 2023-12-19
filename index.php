@@ -54,7 +54,7 @@ else {
             $eventController->getEvents();
             break;
         case '/wowLfg/supprimerpersonnage':
-            $personnageController->supprimerPersonnage();
+            $homeController->getNotConnected();
             break;
         default:
             $homeController->get404();

@@ -26,11 +26,10 @@
         <div class="space_big">  
         </div>
         <article class="color_beige centered blur" >
-            Pour utiliser le site, connecte toi à ton compte battle.net via le boutton connexion en haut de page,
+            Pour utiliser le site, connecte toi à ton compte ou inscrit toi via les boutons connexion / inscription en haut de page,
             puis va sur la page calendrier pour voir les Raid / groupes M+ disponible ! Pour s'inscrire, rien de plus simple ! Cliques sur
-            l'evênement qui t'interesses pour afficher les informations de ce dernier; si ça te convient, appuis sur <em>s'inscrire</em> !
-            Il ne te restes plus qu'a attendre que Raid leader confirme ta place au sein du roster. Tu retrouveras toutes tes candidatures 
-            dans <em>Mon compte</em> !
+            l'evênement qui t'interesses pour en afficher les informations ; si ça te convient, appuis sur <em>s'inscrire</em> !
+            Il ne te restes plus qu'a attendre que Raid leader confirme ta place au sein du roster.
         </article>
         <div class="space_big">  
         </div>

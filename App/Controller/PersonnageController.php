@@ -55,7 +55,7 @@ Class PersonnageController extends Personnage {
                 //appeler la fonction findOneBy qui va retourner un objet (personnage) qui existe ou false
                 if($this->findOneBy()){
                     $this->updateStatutPerso();
-                    $error = 'le personnage '.$this->getNom().'a été supprimé';
+                    $error = 'le personnage '.$this->getNom().' a été supprimé';
                 }
                 //Test le personnage n'existe pas
                 else{

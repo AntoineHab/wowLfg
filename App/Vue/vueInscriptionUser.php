@@ -10,7 +10,7 @@
         </div>
         <div class="inscription">
             <article class="color_beige centered blur textInscr">
-                Inscrivez-vous pour pouvoir participer aux évènements ou en créer. 
+                Inscris toi pour pouvoir participer aux évènements ou en créer. 
             </article>
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="label color_beige">
@@ -29,7 +29,7 @@
                 </div>
             </form>
             <article class="color_beige centered blur txt3">
-                
+                Après l'inscription, connecte toi via le bouton connexion au dessus !
             </article>
         </div>
 </div>
