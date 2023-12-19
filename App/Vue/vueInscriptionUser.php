@@ -29,7 +29,7 @@
                 </div>
             </form>
             <article class="color_beige centered blur txt3">
-                Vous revevrez une confirmation de création de compte par mail. Merci de valider pour utiliser nos fonctionalités !
+                
             </article>
         </div>
 </div>

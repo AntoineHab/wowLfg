@@ -7,7 +7,9 @@
         </div>
     <?php }else{ ?>
         <div class="inscription">
-            <p class="label">Vous devez être connecté</p>
+            <div class="space_big"></div>
+            <div class="space_big"></div>
+            <p class="label">Vous devez être connecté pour supprimer un personnage</p>
         </div>
     <?php }?>
 <?php $content = ob_get_clean()?>

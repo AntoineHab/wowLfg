@@ -18,3 +18,5 @@ class HomeController{
         $error, ['script.js'], ['styles.css', 'main.css']);
     }
 }
+
+?>

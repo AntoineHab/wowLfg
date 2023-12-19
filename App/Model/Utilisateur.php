@@ -68,8 +68,7 @@ class Utilisateur extends BddConnect{
             //récupérer les données de l'objet
             $mail = $this->mail_utilisateur;
             $req = $this->connexion()->prepare(
-                "SELECT id_utilisateur, nom_utilisateur, 
-                mail_utilisateur, password_utilisateur
+                "SELECT id_utilisateur, nom_utilisateur, mail_utilisateur, password_utilisateur
                 FROM utilisateur WHERE mail_utilisateur = ?");
             $req->bindParam(1, $mail, \PDO::PARAM_STR);
             $req->setFetchMode(\PDO::FETCH_CLASS| \PDO::FETCH_PROPS_LATE, Utilisateur::class);
@@ -80,4 +79,5 @@ class Utilisateur extends BddConnect{
         }
     }
 }
+
 ?> 

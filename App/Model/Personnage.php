@@ -9,6 +9,7 @@ class Personnage extends BddConnect{
     private ?string $classe_personnage;
     private ?string $role_personnage;
     private ?string $rio;
+
     //constructeur
 
     //Getters et Setters
@@ -63,8 +64,8 @@ class Personnage extends BddConnect{
             $req = $this->connexion()->prepare(
                 "INSERT INTO personnage(nom_personnage, 
                 serveur_personnage, id_classe_personnage, id_rolee_personnage, rio_personnage, id_utilisateur_personnage,statut_personnage) VALUES(?,?,?,?,?,?,1)");
+        $req->bindParam(2, $serveur, \PDO::PARAM_STR);
             $req->bindParam(1, $nom, \PDO::PARAM_STR);
-            $req->bindParam(2, $serveur, \PDO::PARAM_STR);
             $req->bindParam(3, $classe, \PDO::PARAM_INT);
             $req->bindParam(4, $rolee, \PDO::PARAM_INT);
             $req->bindParam(5, $rio, \PDO::PARAM_STR);
@@ -112,7 +113,8 @@ class Personnage extends BddConnect{
     public function findAll(){
         try {
             $user = $_SESSION['id'];
-            $req = $this->connexion()->prepare('SELECT id_personnage, nom_personnage, nom_rolee, serveur_personnage, nom_classe, rio_personnage, id_rolee_personnage, id_classe_personnage
+            $req = $this->connexion()->prepare('SELECT id_personnage, nom_personnage, nom_rolee,
+            serveur_personnage, nom_classe, rio_personnage, id_rolee_personnage, id_classe_personnage
             FROM personnage 
             INNER JOIN classe ON personnage.id_classe_personnage = classe.id_classe
             INNER JOIN rolee ON personnage.id_rolee_personnage = rolee.id_rolee
@@ -125,4 +127,5 @@ class Personnage extends BddConnect{
         }
     }
 }
+
 ?>

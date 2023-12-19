@@ -53,6 +53,9 @@ else {
         case '/wowLfg/calendrier':
             $eventController->getEvents();
             break;
+        case '/wowLfg/supprimerpersonnage':
+            $personnageController->supprimerPersonnage();
+            break;
         default:
             $homeController->get404();
             break;

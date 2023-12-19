@@ -20,8 +20,9 @@ class UtilisateurController extends Utilisateur{
                     $this->setMail(Utilitaire::cleanInput($_POST['mail_utilisateur']));
                     //tester si le compte existe
                     if(!$this->findOneBy()){
+                        //Setter en false pour validation par mail
                         $this->setStatut(false);
-                        //hashser le mot de passe
+                        //hasher le mot de passe
                         $this->setPassword(password_hash(Utilitaire::cleanInput($_POST['password_utilisateur']), PASSWORD_DEFAULT));
                         //Ajouter le compte en BDD
                         $this->add();
@@ -79,4 +80,5 @@ class UtilisateurController extends Utilisateur{
         header('Location: ./');
     }
 }
-    
+
+?>

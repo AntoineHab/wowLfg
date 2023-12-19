@@ -8,3 +8,5 @@ class Utilitaire{
         return substr(strrchr($file,'.'),1);
     }
 }
+
+?>

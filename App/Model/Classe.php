@@ -5,7 +5,7 @@ class Classe extends BddConnect{
     //Attributs
     private ?int $id_classe;
     private ?string $nom_classe;
-    //constructeur
+
     //Getters et Setters
     public function getId():?int{
         return $this->id_classe;

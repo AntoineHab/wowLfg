@@ -52,8 +52,7 @@ Class PersonnageController extends Personnage {
                 //setter la valeur de $_GET[''] à l'attribut
                 $this->setNom(Utilitaire::cleanInput($_GET['nom']));
                 $this->setServeur(Utilitaire::cleanInput($_GET['serveur']));
-                //appeler la fonction findOneBy qui va retourner un objet (personnage)
-                //qui existe ou false
+                //appeler la fonction findOneBy qui va retourner un objet (personnage) qui existe ou false
                 if($this->findOneBy()){
                     $this->updateStatutPerso();
                     $error = 'le personnage '.$this->getNom().'a été supprimé';
@@ -77,3 +76,5 @@ Class PersonnageController extends Personnage {
         header("refresh:2;url=./moncompte");
     }
 }
+
+?>
